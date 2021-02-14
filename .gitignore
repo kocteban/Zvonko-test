@@ -1,0 +1,7 @@
+selenium
+__pycache__
+.pytest_cache
+debug
+debug.log
+.idea
+venv
