@@ -7,6 +7,7 @@ from locators.Widget import *
 from locators.BasePage import *
 
 
+@pytest.mark.smoke
 class TestWidgets:
     def test_widget_genres_show_all(self, browser):
         Widgets.press_show_all_widgets(browser, *WidgetsLocators.GENRES_SHOW_ALL)

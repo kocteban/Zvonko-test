@@ -1,9 +1,11 @@
+import pytest
 from helper import page_helper
 from helper.page_helper import *
 from locators.BasePage import *
 
 
 class TestSearch:
+    @pytest.mark.smoke
     def test_search(self, browser):
         page_helper.input_words(browser, *BasePageLocators.SEARCH, "привет")
         js_click(browser, *BasePageLocators.SEARCH_BUTTON)

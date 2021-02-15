@@ -7,6 +7,7 @@ from locators.Carousels import *
 from locators.BasePage import *
 
 
+@pytest.mark.smoke
 class TestCarousels:
     def test_top_carousel_show_all_button(self, browser):
         js_click(browser, *CarouselsLocators.TOP_CAR_SHOW_ALL)

@@ -1,14 +1,13 @@
 import time
+import pytest
 from modules import MainPage, Menu, Collections
-# from modules import Menu
-# from modules import Collections
 from helper.page_helper import js_click
 from helper import page_helper
 from locators.Collection import *
 from locators.BasePage import *
 from locators.User import *
 
-
+@pytest.mark.smoke
 class TestCollections:
     def test_collections_carousel_show_all_button(self, browser):
         Menu.go_to_menu_collections(browser)

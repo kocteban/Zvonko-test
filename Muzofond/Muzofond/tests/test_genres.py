@@ -1,4 +1,5 @@
 import time
+import pytest
 from modules import MainPage
 from modules import Menu
 from modules import Genres
@@ -7,7 +8,7 @@ from locators.Genres import *
 from locators.BasePage import *
 from locators.User import *
 
-
+@pytest.mark.smoke
 class TestGenres:
     def test_genres_name(self, browser):
         Menu.go_to_menu_genres(browser)

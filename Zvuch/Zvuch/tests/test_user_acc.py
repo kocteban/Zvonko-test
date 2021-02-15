@@ -1,3 +1,4 @@
+import pytest
 from modules import Menu
 from modules import MainPage
 from helper.page_helper import *
@@ -7,6 +8,7 @@ from locators.User import *
 from locators.BasePage import *
 
 
+@pytest.mark.smoke
 class TestUserAcc:
     def test_user_auth(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)

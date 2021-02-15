@@ -2,13 +2,6 @@ from helper.page_helper import js_click
 from locators.BasePage import BasePageLocators
 
 
-def try_test_main_page_promo(browser, click_element, search_url):
-	js_click_by_css_select(browser, click_element)
-	second_window = browser.window_handles[1]
-	browser.switch_to.window(second_window)
-	assert search_url in browser.current_url
-
-
 def click_page_description(browser):
 	js_click(browser, *BasePageLocators.PAGE_DESCRIPTION_NAME)
 

@@ -1,10 +1,11 @@
 import time
+import pytest
 from modules import Player
 from helper import page_helper
 from locators.BasePage import *
 from locators.BottomPlayer import *
 
-
+@pytest.mark.smoke
 class TestPlayer:
     def test_play_button(self, browser):
         Player.press_play_button(browser)
