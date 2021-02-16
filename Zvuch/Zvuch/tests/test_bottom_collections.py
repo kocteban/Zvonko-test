@@ -6,6 +6,7 @@ from locators.BottomCollection import *
 
 class TestBottomCollections:
     @pytest.mark.regression
+    @pytest.mark.xfail
     def test_bottom_collection_header(self, browser):
         name1 = page_helper.get_text_element(browser, *BottomCollectionLocators.HEADER)
         js_click(browser, *BottomCollectionLocators.HEADER)
