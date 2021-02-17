@@ -3,38 +3,35 @@ from random import *
 
 
 class BasePageLocators:
-    SITE_URL = 'https://muzofond.fm/'
+    SITE_URL = 'https://top.hitparad.fm/'
 
-    PLAYING_TRACK = (By.CSS_SELECTOR, ".item.played.active")
-    PAUSED_TRACK = (By.CSS_SELECTOR, ".item.played.active.pause")
-    RANDOM_TRACK = (By.CSS_SELECTOR, ".mainSongs > :nth-child(%s)" % str(randint(1, 100)))
-    FIRST_TRACK = (By.CSS_SELECTOR, ".mainSongs > :nth-child(1)")
-    SECOND_TRACK = (By.CSS_SELECTOR, ".mainSongs > :nth-child(2)")
-    PLAYING_RADIO = (By.CSS_SELECTOR, ".item.play")
-    LISTEN_BUTTON = (By.CSS_SELECTOR, ".listen.button")
-    PLAY_RANDOM_TRACK = (By.CSS_SELECTOR, ".module-layout .mainSongs>:nth-child(%s) .play" % str(randint(1, 100)))
+    PLAYING_TRACK = (By.XPATH, ".item.played.active")
+    PAUSED_TRACK = (By.XPATH, ".item.played.active.pause")
+    PLAYING_RADIO = (By.XPATH, ".item.play")
+    LISTEN_BUTTON = (By.XPATH, ".listen.button")
+    RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]" % str(randint(1, 100)))
+    FIRST_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]")
+    SECOND_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[2]")
+    PLAY_RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]/div[1]/ul/li" % str(randint(1, 100)))
 
-    LIKE_TRACK = (By.CSS_SELECTOR, ".favorite.favoriteIco")
-    BUTTON_FAVORITE = (By.CSS_SELECTOR, ".button.outline.favorite")
+    LIKE_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div")
+    BUTTON_FAVORITE = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[3]/span")
 
-    PAGE_DESCRIPTION_NAME = (By.CSS_SELECTOR, "div.mobileHide.topPageDescription > p:nth-child(2) > a:nth-child(%s) > span"
-                             % str(randint(2, 6)))
 
-    SBER_PLAY_BUTTON = (By.CSS_SELECTOR, ".span.desktop .actions .playOther .playOtherLink")
-    SBER_DOWNLOAD_BUTTON = (By.CSS_SELECTOR, ".span.desktop .download .dl")
+    SBER_PLAY_BUTTON = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[1]/ul/noindex/li/a")
     SBER_URL = "sber-zvuk.com"
 
-    H1 = 'body h1'
+    H1 = '/html/body/div[2]/div[1]/div[2]/div[2]/div/div/h1'
 
-    MAIN_LOGO = (By.CSS_SELECTOR, ".logo")
+    MAIN_LOGO = (By.XPATH, "/html/body/div[1]/div/a")
 
-    SEARCH = (By.CSS_SELECTOR, "#search")
-    SEARCH_BUTTON = (By.CSS_SELECTOR, ".form [type = 'submit']")
+    SEARCH = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/div[1]/form/div/div/div/input")
+    SEARCH_BUTTON = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/div[1]/form/div/div/div/div/button")
 
-    GENRES_SHOW_ALL = (By.CSS_SELECTOR, ".centerMain .showAll")
-    GENRES_LIST_GENRE = (By.CSS_SELECTOR, "div.module-popular > div > ul > li:nth-child(48) > a")
-    RANDOM_GENRE_LIST = (By.CSS_SELECTOR, "div.module-popular > div > ul > li:nth-child(%s) > a" % str(randint(1, 61)))
+    GENRES_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/div[2]/div/h3/span")
+    GENRES_LIST_GENRE = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/div[2]/div/ul/li[52]/a")
+    RANDOM_GENRE_LIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[1]/div[2]/div/ul/li[%s]/a" % str(randint(1, 61)))
 
     j = randint(1, 2)
     k = randint(1, 28)
-    ALPHABET_LETTER = (By.CSS_SELECTOR, "noindex > div > ul:nth-child(%s) > li:nth-child(%s) > a" % (j, k))
+    ALPHABET_LETTER = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[1]/div/div/ul[%s]/li[%s]/a" % (j, k))

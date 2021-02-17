@@ -2,13 +2,13 @@ from selenium.webdriver.common.by import By
 
 
 class BottomPlayerLocators:
-    BOTTOM_PLAY = (By.CSS_SELECTOR, ".group .play")
-    BOTTOM_PAUSE = (By.CSS_SELECTOR, ".group .pause")
-    BOTTOM_PREV = (By.CSS_SELECTOR, ".group .prev")
-    BOTTOM_NEXT = (By.CSS_SELECTOR, ".group .next")
-    BOTTOM_REPEAT = (By.CSS_SELECTOR, ".group .repeat")
-    BOTTOM_SHUFFLE = (By.CSS_SELECTOR, ".group .shuffle")
-    BOTTOM_MUTE = (By.CSS_SELECTOR, ".group .mute")
-    BOTTOM_ACTIVE_MUTE = (By.CSS_SELECTOR, ".mute.active")
-    BOTTOM_ACTIVE_REPEAT = (By.CSS_SELECTOR, ".repeat.active")
-    BOTTOM_ACTIVE_SHUFFLE = (By.CSS_SELECTOR, ".shuffle.active")
+    BOTTOM_PLAY = (By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[2]")
+    BOTTOM_PAUSE = (By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[3]")
+    BOTTOM_PREV = (By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[1]")
+    BOTTOM_NEXT = (By.XPATH, "/html/body/div[1]/div/div[2]/div[2]/div[4]")
+    BOTTOM_REPEAT = (By.XPATH, "/html/body/div[1]/div/div[2]/div[1]/div[1]")
+    BOTTOM_SHUFFLE = (By.XPATH, "/html/body/div[1]/div/div[2]/div[1]/div[2]")
+    BOTTOM_MUTE = (By.XPATH, "/html/body/div[1]/div/div[2]/div[1]/div[3]")
+    BOTTOM_ACTIVE_MUTE = (By.XPATH, ".mute.active")
+    BOTTOM_ACTIVE_REPEAT = (By.XPATH, ".repeat.active")
+    BOTTOM_ACTIVE_SHUFFLE = (By.XPATH, ".shuffle.active")
