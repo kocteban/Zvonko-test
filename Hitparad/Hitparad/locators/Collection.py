@@ -3,7 +3,7 @@ from random import *
 
 
 class CollectionLocators:
-    COLLECTION_NAME = (By.CSS_SELECTOR, "div.kineticCenter.kinetic-active > ul > li:nth-child(%s) > a > span" % str(randint(1, 10)))
+    COLLECTION_NAME = (By.CSS_SELECTOR, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]/a/span" % str(randint(1, 10)))
 
     n = randrange(2, 41, 2)
     COLLECTION_SLIDER_HEADER = (By.CSS_SELECTOR, "div.span.desktop > div > h3:nth-child(%s) > a" % n)

@@ -56,7 +56,7 @@ def is_not_element_clickable(browser, *element):
 
 
 def get_h1_text(browser):
-    h1 = browser.find_element_by_css_selector(BasePageLocators.H1).text.lower()
+    h1 = browser.find_element(*BasePageLocators.H1).text.lower()
     return h1
 
 

@@ -3,36 +3,36 @@ from random import *
 
 
 class UserLocators:
-    VK_AUTH = (By.CSS_SELECTOR, ".authButton.vkauth")
-    YA_AUTH = (By.CSS_SELECTOR, ".authButton.yandexauth")
-    MAIL_AUTH = (By.CSS_SELECTOR, ".authButton.mailauth")
-    LOGOUT = (By.CSS_SELECTOR, ".logout > a")
-    USER_ACC = (By.CSS_SELECTOR, ".myMusic")
+    VK_AUTH = (By.CSS_SELECTOR, "._98._99")
+    YA_AUTH = (By.CSS_SELECTOR, "._98._9c")
+    MAIL_AUTH = (By.CSS_SELECTOR, "._98._9a")
+    LOGOUT = (By.CSS_SELECTOR, "._f7 a")
+    USER_ACC = (By.CSS_SELECTOR, "._91")
 
     n = randint(1, 100)
-    LIKE_RANDOM_TRACK = (By.CSS_SELECTOR, "div.span.desktop > div > ul > li:nth-child(%s) > div.endItem > div.favorite.favoriteIco"
+    LIKE_RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]/div[4]/div"
                          % n)
-    RANDOM_TRACK = (By.CSS_SELECTOR, "div.span.desktop > div > ul > li:nth-child(%s)" % n)
+    RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]" % n)
 
-    USER_SONGS = (By.CSS_SELECTOR, "div.sort.favoritePage > :nth-child(1)")
-    USER_ALBUMS = (By.CSS_SELECTOR, "div.sort.favoritePage > :nth-child(2)")
-    USER_PLAYLIST = (By.CSS_SELECTOR, "div.sort.favoritePage > :nth-child(3)")
-    USER_COLLECTION = (By.CSS_SELECTOR, "div.sort.favoritePage > :nth-child(4)")
-    USER_SINGERS = (By.CSS_SELECTOR, "div.sort.favoritePage > :nth-child(5)")
+    USER_SONGS = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/a[1]")
+    USER_ALBUMS = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/a[2]")
+    USER_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/a[3]")
+    USER_COLLECTION = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/a[4]")
+    USER_SINGERS = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div/a[5]")
 
-    FIRST_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop > div > ul > li > a > span")
+    FIRST_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li/a/span")
 
-    CREATE_PLAYLIST = (By.CSS_SELECTOR, ".newPlaylist_cover")
-    REMOVE_PLAYLIST = (By.CSS_SELECTOR, ".remove_playlist")
-    REMOVE_PLAYLIST_CONFIRM = (By.CSS_SELECTOR, ".button_delete")
-    PLAYLIST_NAME = (By.CSS_SELECTOR, "div.titlePlaylist > div")
-    EXIST_PLAYLIST = (By.CSS_SELECTOR, "a.cover img")
-    FIRST_TRACK_PLAYLIST = (By.CSS_SELECTOR, "#sortable li")
+    CREATE_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/a")
+    REMOVE_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[2]/div[2]/div")
+    REMOVE_PLAYLIST_CONFIRM = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[4]/div/div/a")
+    PLAYLIST_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div")
+    EXIST_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[2]/a/div/div/img")
+    FIRST_TRACK_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/div/li")
 
-    PLAYLIST_SEARCH = (By.CSS_SELECTOR, ".span .inInputSearch input")
-    CONFIRM_SEARCH = (By.CSS_SELECTOR, "#user-playlist-search > div > div > div > div > button")
+    PLAYLIST_SEARCH = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[2]/form/div/div/div/input")
+    CONFIRM_SEARCH = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[2]/form/div/div/div/div/button")
     FIRST_SEARCH_TRACK = (By.CSS_SELECTOR, "div.searchPlaylist_popup > li:nth-child(1)")
 
-    ADD_TRACK_TO_PLAYLIST = (By.CSS_SELECTOR, ".inPlaylists")
-    TRACK_CREATE_PLAYLIST = (By.CSS_SELECTOR, ".create_playlist")
-    FIRST_ELEMENT_IN_LIST = (By.CSS_SELECTOR, "#list > li")
+    ADD_TRACK_TO_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div[1]")
+    TRACK_CREATE_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div[1]/div/div")
+    FIRST_ELEMENT_IN_LIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div[1]/div/ul/li")

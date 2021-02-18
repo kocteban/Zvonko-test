@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
 
 class RadioLocators:
-    RADIO_PLAY = (By.CSS_SELECTOR, "div.span.desktop > div > ul > li:nth-child(3)")
-    PLAYING_RADIO = (By.CSS_SELECTOR, ".item.collectionGrid.play")
+    RADIO_PLAY = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[3]")
+    PLAYING_RADIO = (By.CSS_SELECTOR, "._3._11")

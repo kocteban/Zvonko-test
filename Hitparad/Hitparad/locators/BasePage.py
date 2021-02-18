@@ -5,10 +5,10 @@ from random import *
 class BasePageLocators:
     SITE_URL = 'https://top.hitparad.fm/'
 
-    PLAYING_TRACK = (By.XPATH, ".item.played.active")
-    PAUSED_TRACK = (By.XPATH, ".item.played.active.pause")
-    PLAYING_RADIO = (By.XPATH, ".item.play")
-    LISTEN_BUTTON = (By.XPATH, ".listen.button")
+    PLAYING_TRACK = (By.CSS_SELECTOR, "._3._1a")
+    PAUSED_TRACK = (By.CSS_SELECTOR, "._3._1a._12")
+    PLAYING_RADIO = (By.CSS_SELECTOR, "._3._11")
+    LISTEN_BUTTON = (By.CSS_SELECTOR, "._34._cd")
     RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]" % str(randint(1, 100)))
     FIRST_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]")
     SECOND_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[2]")
@@ -17,11 +17,10 @@ class BasePageLocators:
     LIKE_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div")
     BUTTON_FAVORITE = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[3]/span")
 
-
     SBER_PLAY_BUTTON = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[1]/ul/noindex/li/a")
     SBER_URL = "sber-zvuk.com"
 
-    H1 = '/html/body/div[2]/div[1]/div[2]/div[2]/div/div/h1'
+    H1 = (By.XPATH, '/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[2]/h1')
 
     MAIN_LOGO = (By.XPATH, "/html/body/div[1]/div/a")
 
