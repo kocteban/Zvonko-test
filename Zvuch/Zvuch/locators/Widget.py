@@ -2,6 +2,7 @@ from selenium.webdriver.common.by import By
 
 
 class WidgetsLocators:
+    SLIDER_SHOW_ALL = (By.CSS_SELECTOR, ".box.widget.miniSlider .widgetLink")
     GENRES_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(3) div > a")
     SINGERS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) div > a")
     NEWS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(5) div > a")
@@ -10,6 +11,7 @@ class WidgetsLocators:
     DISCO_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(9) div > a")
     NATIONAL_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(10) div > a")
 
+    SLIDER_COLLECTION_NAME = (By.CSS_SELECTOR, "#slick-slide00 > a > p")
     GENRES_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(3) > div > ul > "
                                                "li:nth-child(6) > a > span")
     GENRES_COLLECTION = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(3) > div > ul > li:nth-child(6) "

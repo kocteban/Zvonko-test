@@ -9,6 +9,11 @@ from locators.BasePage import *
 
 @pytest.mark.smoke
 class TestWidgets:
+    def test_widget_slider_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.SLIDER_SHOW_ALL)
+        cur_url = browser.current_url
+        assert cur_url == BasePageLocators.SITE_URL + "collections"
+
     def test_widget_genres_show_all(self, browser):
         Widgets.press_show_all_widgets(browser, *WidgetsLocators.GENRES_SHOW_ALL)
         h1 = page_helper.get_h1_text(browser)
@@ -43,6 +48,12 @@ class TestWidgets:
         Widgets.press_show_all_widgets(browser, *WidgetsLocators.NATIONAL_SHOW_ALL)
         h1 = page_helper.get_h1_text(browser)
         assert h1 == "национальная музыка"
+
+    def test_widget_slider_collecion(self, browser):
+        name1 = page_helper.get_text_element(browser, *WidgetsLocators.SLIDER_COLLECTION_NAME)
+        js_click(browser, *WidgetsLocators.SLIDER_COLLECTION_NAME)
+        h1 = page_helper.get_h1_text(browser)
+        assert name1 in h1
 
     def test_widget_genres_collection(self, browser):
         name1 = page_helper.get_text_element(browser, *WidgetsLocators.GENRES_COLLECTION_NAME)
