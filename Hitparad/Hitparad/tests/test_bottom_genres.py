@@ -7,7 +7,7 @@ from locators.BottomGenres import *
 class TestBottomCollections:
     @pytest.mark.regression
     def test_genres_collection_name(self, browser):
-        name1 = page_helper.get_text_element(browser, *BottomCollectionLocators.COLLECTION_NAME)
-        js_click(browser, *BottomCollectionLocators.COLLECTION_NAME)
+        name1 = page_helper.get_text_element(browser, *BottomGenresLocators.COLLECTION_NAME)
+        js_click(browser, *BottomGenresLocators.COLLECTION_NAME)
         h1 = page_helper.get_h1_text(browser)
         assert name1 in h1

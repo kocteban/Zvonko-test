@@ -24,13 +24,6 @@ class TestMainPage:
         cur_url = browser.current_url
         assert BasePageLocators.SBER_URL in cur_url
 
-    @pytest.mark.smoke
-    def test_main_page_sber_download(self, browser):
-        MainPage.press_sber_download(browser)
-        page_helper.switch_to_second_window(browser)
-        cur_url = browser.current_url
-        assert BasePageLocators.SBER_URL in cur_url
-
     @pytest.mark.regression
     def test_open_genres_list(self, browser):
         MainPage.open_genres_list(browser)

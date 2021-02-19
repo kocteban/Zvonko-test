@@ -1,22 +1,20 @@
 from selenium.webdriver.common.by import By
+from random import randint
 
 
 class WidgetsLocators:
-    POPULAR_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) > h3 > a")
-    SINGERS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(5) > h3 > a")
-    NEWS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(6) > div > div.titleCollections > h3 > a")
-    RADIO_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(7) > h3 > a")
-    SPORT_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(8) > h3 > a")
-    OST_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(9) > h3 > a")
-    GAMES_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(10) > h3 > a")
-    NATIONAL_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(11) > h3 > a")
+    POPULAR_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[2]/h3/a")
+    SINGERS_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[3]/h3/a")
+    RADIO_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[4]/h3/a")
+    SPORT_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[5]/h3/a")
+    OST_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[6]/h3/a")
+    GAMES_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[7]/h3/a")
+    NATIONAL_SHOW_ALL = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[8]/h3/a")
 
-    POPULAR_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) > span:nth-child(2) > a")
-    SINGERS_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(5) > span:nth-child(2) > a")
-    RADIO_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(7) > span:nth-child(2) > a")
-    SPORT_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(8) > span:nth-child(2) > a")
-    OST_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(9) > span:nth-child(2) > a")
-    GAMES_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(10) > span:nth-child(2) > a")
-    NATIONAL_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(11) > span:nth-child(2) > a")
-
-    NEWS_PLAY_STOP = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(6) > div > div.module-layout > ul > li:nth-child(1)")
+    POPULAR_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[2]/span[%s]/a" % randint(1, 15))
+    SINGERS_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[3]/span[%s]/a" % randint(1, 15))
+    RADIO_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[4]/span[%s]/a" % randint(1, 15))
+    SPORT_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[5]/span[%s]/a" % randint(1, 15))
+    OST_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[6]/span[%s]/a" % randint(1, 15))
+    GAMES_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[7]/span[%s]/a" % randint(1, 15))
+    NATIONAL_COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[1]/div[8]/span[%s]/a" % randint(1, 15))

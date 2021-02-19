@@ -5,10 +5,9 @@ from random import *
 class BasePageLocators:
     SITE_URL = 'https://top.hitparad.fm/'
 
-    PLAYING_TRACK = (By.CSS_SELECTOR, "._3._1a")
-    PAUSED_TRACK = (By.CSS_SELECTOR, "._3._1a._12")
-    PLAYING_RADIO = (By.CSS_SELECTOR, "._3._11")
-    LISTEN_BUTTON = (By.CSS_SELECTOR, "._34._cd")
+    PLAYING_TRACK = (By.CSS_SELECTOR, "._wA3._wAt")
+    PAUSED_TRACK = (By.CSS_SELECTOR, "._wA3._wAt._wAl")
+    LISTEN_BUTTON = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[3]/a")
     RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]" % str(randint(1, 100)))
     FIRST_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]")
     SECOND_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[2]")
@@ -20,7 +19,7 @@ class BasePageLocators:
     SBER_PLAY_BUTTON = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[1]/ul/noindex/li/a")
     SBER_URL = "sber-zvuk.com"
 
-    H1 = (By.XPATH, '/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[2]/h1')
+    H1 = (By.CSS_SELECTOR, '._wA14 h1')
 
     MAIN_LOGO = (By.XPATH, "/html/body/div[1]/div/a")
 

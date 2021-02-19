@@ -3,11 +3,11 @@ from random import *
 
 
 class UserLocators:
-    VK_AUTH = (By.CSS_SELECTOR, "._98._99")
-    YA_AUTH = (By.CSS_SELECTOR, "._98._9c")
-    MAIL_AUTH = (By.CSS_SELECTOR, "._98._9a")
-    LOGOUT = (By.CSS_SELECTOR, "._f7 a")
-    USER_ACC = (By.CSS_SELECTOR, "._91")
+    VK_AUTH = (By.CSS_SELECTOR, "._wA4z._wA50")
+    YA_AUTH = (By.CSS_SELECTOR, "._wA4z._wA53")
+    MAIL_AUTH = (By.CSS_SELECTOR, "._wA4z._wA51")
+    LOGOUT = (By.CSS_SELECTOR, "._wA84 a")
+    USER_ACC = (By.CSS_SELECTOR, "._wA4s")
 
     n = randint(1, 100)
     LIKE_RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]/div[4]/div"
