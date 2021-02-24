@@ -10,7 +10,7 @@ class UserLocators:
     USER_ACC = (By.CSS_SELECTOR, "._wA4s")
 
     n = randint(1, 100)
-    LIKE_RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]/div[4]/div"
+    LIKE_RANDOM_TRACK = (By.CSS_SELECTOR, "div.span._wA7h > div > ul > li:nth-child(%s) > div._wA3e > div._wA81._wA82"
                          % n)
     RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]" % n)
 
@@ -27,11 +27,11 @@ class UserLocators:
     REMOVE_PLAYLIST_CONFIRM = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[4]/div/div/a")
     PLAYLIST_NAME = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[2]/div[2]/div[1]/div")
     EXIST_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[2]/a/div/div/img")
-    FIRST_TRACK_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/div/li")
+    FIRST_TRACK_PLAYLIST = (By.CSS_SELECTOR, "#_wA6u li")
 
     PLAYLIST_SEARCH = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[2]/form/div/div/div/input")
     CONFIRM_SEARCH = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[2]/form/div/div/div/div/button")
-    FIRST_SEARCH_TRACK = (By.CSS_SELECTOR, "div.searchPlaylist_popup > li:nth-child(1)")
+    FIRST_SEARCH_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[3]/li[1]")
 
     ADD_TRACK_TO_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div[1]")
     TRACK_CREATE_PLAYLIST = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div[1]/div/div")

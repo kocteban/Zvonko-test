@@ -3,5 +3,5 @@ from random import *
 
 
 class BottomGenresLocators:
-    COLLECTION_NAME = (By.XPATH, "/html/body/div[2]/div[2]/div[1]/div[2]/ul/div[%s]/li/a"
+    COLLECTION_NAME = (By.CSS_SELECTOR, "div._wA1a._wA1h > ul > div:nth-child(%s) > li:nth-child(2) > a"
                        % str(randint(1, 8)))

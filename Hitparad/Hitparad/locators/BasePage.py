@@ -13,7 +13,7 @@ class BasePageLocators:
     SECOND_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[2]")
     PLAY_RANDOM_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[%s]/div[1]/ul/li" % str(randint(1, 100)))
 
-    LIKE_TRACK = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[4]/div")
+    LIKE_TRACK = (By.CSS_SELECTOR, "div.span._wA7h > div > ul > li:nth-child(1) > div._wA3e > div._wA81._wA82")
     BUTTON_FAVORITE = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/div[1]/div[3]/span")
 
     SBER_PLAY_BUTTON = (By.XPATH, "/html/body/div[2]/div[1]/div[2]/div[2]/div/ul/li[1]/div[1]/ul/noindex/li/a")

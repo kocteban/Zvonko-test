@@ -19,7 +19,7 @@ def browser():
 def browser_cookies():
     options = webdriver.ChromeOptions()
     options.add_argument("--start-maximized")
-    options.add_argument("user-data-dir=selenium")
+    options.add_argument("user-data-dir=C:\python\Work\Zvonko-test\Hitparad\Hitparad\helper\selenium")
     options.add_experimental_option('excludeSwitches', ['enable-logging'])
     browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(5)

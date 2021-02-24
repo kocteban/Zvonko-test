@@ -8,6 +8,7 @@ from locators.Genres import *
 from locators.BasePage import *
 from locators.User import *
 
+
 @pytest.mark.smoke
 class TestGenres:
     def test_genres_name(self, browser):
@@ -27,14 +28,6 @@ class TestGenres:
         page_helper.switch_to_second_window(browser)
         cur_url = browser.current_url
         assert BasePageLocators.SBER_URL in cur_url
-
-    def test_genres_listen_button(self, browser):
-        Menu.go_to_menu_genres(browser)
-        time.sleep(2)
-        Genres.open_random_genre(browser)
-        time.sleep(2)
-        MainPage.click_listen_button(browser)
-        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
     def test_genres_like_track_button(self, browser):
         Menu.go_to_menu_genres(browser)

@@ -35,15 +35,6 @@ class TestSingers:
         assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
     @pytest.mark.smoke
-    def test_singers_sber_download_button(self, browser):
-        Menu.go_to_menu_singers(browser)
-        SingersAlbums.open_random_collection(browser)
-        MainPage.press_sber_download(browser)
-        page_helper.switch_to_second_window(browser)
-        cur_url = browser.current_url
-        assert BasePageLocators.SBER_URL in cur_url
-
-    @pytest.mark.smoke
     def test_singers_sber_play_button(self, browser):
         Menu.go_to_menu_singers(browser)
         SingersAlbums.open_random_collection(browser)

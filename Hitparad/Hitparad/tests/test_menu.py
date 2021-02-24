@@ -32,13 +32,13 @@ class TestMenu:
     def test_top_menu_radio(self, browser):
         Menu.go_to_menu_radio(browser)
         h1 = page_helper.get_h1_text(browser)
-        assert "радио онлайн" == h1
+        assert "онлайн радио" == h1
 
     @pytest.mark.smoke
     def test_top_menu_collections(self, browser):
         Menu.go_to_menu_collections(browser)
         h1 = page_helper.get_h1_text(browser)
-        assert "сборники" == h1
+        assert "музыкальные сборники" == h1
 
     @pytest.mark.regression
     def test_bot_menu_news(self, browser):
@@ -68,10 +68,10 @@ class TestMenu:
     def test_bot_menu_radio(self, browser):
         Menu.go_to_bot_menu_radio(browser)
         h1 = page_helper.get_h1_text(browser)
-        assert "радио онлайн" == h1
+        assert "онлайн радио" == h1
 
     @pytest.mark.regression
     def test_bot_menu_collections(self, browser):
         Menu.go_to_bot_menu_collections(browser)
         h1 = page_helper.get_h1_text(browser)
-        assert "сборники" == h1
+        assert "музыкальные сборники" == h1
