@@ -6,5 +6,5 @@ def open_random_collection(browser):
 	js_click(browser, *CollectionLocators.COLLECTION_NAME)
 
 
-def collection_scroll_carousel(browser):
-	js_click(browser, *CollectionLocators.COLLECTION_SLIDER_ARROW)
+def collection_show_all(browser):
+	js_click(browser, *CollectionLocators.COLLECTION_SHOW_ALL)
