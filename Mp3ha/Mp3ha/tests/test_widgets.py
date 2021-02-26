@@ -5,6 +5,7 @@ from helper.page_helper import *
 from helper import page_helper
 from locators.Widget import *
 from locators.BasePage import *
+from locators.Radio import *
 
 
 @pytest.mark.smoke
@@ -126,4 +127,4 @@ class TestWidgets:
 
     def test_widget_radio_play(self, browser):
         js_click(browser, *WidgetsLocators.RADIO_PLAY)
-        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_RADIO)
+        assert page_helper.is_element_present(browser, *RadioLocators.PLAYING_RADIO)
