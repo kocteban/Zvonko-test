@@ -1,130 +1,81 @@
 import pytest
-import time
 from modules import Widgets
 from helper.page_helper import *
 from helper import page_helper
 from locators.Widget import *
 from locators.BasePage import *
-from locators.Radio import *
 
 
 @pytest.mark.smoke
 class TestWidgets:
-    def test_widget_slider_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.SLIDER_SHOW_ALL)
-        cur_url = browser.current_url
-        assert cur_url == BasePageLocators.SITE_URL + "collections"
-
-    def test_widget_genres_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.GENRES_SHOW_ALL)
-        h1 = page_helper.get_h1_text(browser)
-        assert h1 == "жанры"
-
-    def test_widget_singers_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.SINGERS_SHOW_ALL)
-        h1 = page_helper.get_h1_text(browser)
-        assert h1 == "исполнители"
-
     def test_widget_news_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.NEWS_SHOW_ALL)
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.NEWS_HEADER)
         h1 = page_helper.get_h1_text(browser)
-        assert h1 == "новинки"
+        assert h1 == 'новинки февраля 2021'
+
+    def test_widget_ringtones_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.RINGTONES_HEADER)
+        h1 = page_helper.get_h1_text(browser)
+        assert h1 == "новинки рингтонов 2021"
+
+    def test_widget_dj_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.DJ_HEADER)
+        h1 = page_helper.get_h1_text(browser)
+        assert h1 == "dj remix"
+
+    def test_widget_hits_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.HITS_HEADER)
+        h1 = page_helper.get_h1_text(browser)
+        assert h1 == "золотые хиты 80-90-х"
+
+    def test_widget_popular_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.POPULAR_HEADER)
+        h1 = page_helper.get_h1_text(browser)
+        assert h1 == "сборники новинок"
 
     def test_widget_radio_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.RADIO_SHOW_ALL)
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.RADIO_HEADER)
         h1 = page_helper.get_h1_text(browser)
-        assert h1 == "онлайн радио"
+        assert h1 == "europa plus"
 
-    def test_widget_ost_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.OST_SHOW_ALL)
+    def test_widget_tv_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.TV_HEADER)
         h1 = page_helper.get_h1_text(browser)
-        assert h1 == "ost к фильмам и сериалам"
+        assert h1 == "муз тв"
 
-    def test_widget_disco_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.DISCO_SHOW_ALL)
+    def test_widget_vk_show_all(self, browser):
+        Widgets.press_show_all_widgets(browser, *WidgetsLocators.VK_HEADER)
         h1 = page_helper.get_h1_text(browser)
-        assert h1 == "дискотека"
-
-    def test_widget_national_show_all(self, browser):
-        Widgets.press_show_all_widgets(browser, *WidgetsLocators.NATIONAL_SHOW_ALL)
-        h1 = page_helper.get_h1_text(browser)
-        assert h1 == "национальная музыка"
-
-    def test_widget_slider_collecion(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.SLIDER_COLLECTION_NAME)
-        js_click(browser, *WidgetsLocators.SLIDER_COLLECTION_NAME)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
-
-    def test_widget_genres_collection(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.GENRES_COLLECTION_NAME)
-        js_click(browser, *WidgetsLocators.GENRES_COLLECTION)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
-
-    def test_widget_singers_collection(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.SINGERS_COLLECTION_NAME)
-        js_click(browser, *WidgetsLocators.SINGERS_COLLECTION)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
-
-    def test_widget_ost_collection(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.OST_COLLECTION_NAME)
-        js_click(browser, *WidgetsLocators.OST_COLLECTION)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
-
-    def test_widget_disco_collection(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.DISCO_COLLECTION_NAME)
-        js_click(browser, *WidgetsLocators.DISCO_COLLECTION)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
-
-    def test_widget_national_collection(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.NATIONAL_COLLECTION_NAME)
-        js_click(browser, *WidgetsLocators.NATIONAL_COLLECTION)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
+        assert h1 == "популярная музыка вк"
 
     def test_widget_news_play(self, browser):
         js_click(browser, *WidgetsLocators.NEWS_PLAY_STOP)
         assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
-    def test_widget_search_play(self, browser):
-        js_click(browser, *WidgetsLocators.SEARCH_PLAY_STOP)
+    def test_widget_ringtones_play(self, browser):
+        js_click(browser, *WidgetsLocators.RINGTONES_PLAY_STOP)
         assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
-    def test_news_widget_stop(self, browser):
-        js_click(browser, *WidgetsLocators.NEWS_PLAY_STOP)
-        time.sleep(0.5)
-        js_click(browser, *WidgetsLocators.NEWS_PLAY_STOP)
-        assert page_helper.is_element_present(browser, *BasePageLocators.PAUSED_TRACK)
+    def test_widget_dj_play(self, browser):
+        js_click(browser, *WidgetsLocators.DJ_PLAY_STOP)
+        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
-    def test_widget_search_stop(self, browser):
-        js_click(browser, *WidgetsLocators.SEARCH_PLAY_STOP)
-        time.sleep(0.5)
-        js_click(browser, *WidgetsLocators.SEARCH_PLAY_STOP)
-        assert page_helper.is_element_present(browser, *BasePageLocators.PAUSED_TRACK)
+    def test_widget_hits_play(self, browser):
+        js_click(browser, *WidgetsLocators.HITS_PLAY_STOP)
+        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
-    def test_widget_news_singer_name(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.NEWS_SINGERS_NAME)
-        js_click(browser, *WidgetsLocators.NEWS_SINGERS)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1, print(name1, h1)
-
-    @pytest.mark.xfail
-    def test_widget_news_track_name(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.NEWS_SONG_NAME)
-        js_click(browser, *WidgetsLocators.NEWS_SONG)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1, print(name1, h1)
-
-    def test_widget_search_track_name(self, browser):
-        name1 = page_helper.get_text_element(browser, *WidgetsLocators.SEARCH_SINGERS_NAME)
-        js_click(browser, *WidgetsLocators.SEARCH_SINGER)
-        h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1, print(name1, h1)
+    def test_widget_popular_play(self, browser):
+        js_click(browser, *WidgetsLocators.POPULAR_PLAY_STOP)
+        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
 
     def test_widget_radio_play(self, browser):
-        js_click(browser, *WidgetsLocators.RADIO_PLAY)
-        assert page_helper.is_element_present(browser, *RadioLocators.PLAYING_RADIO)
+        js_click(browser, *WidgetsLocators.RADIO_PLAY_STOP)
+        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
+
+    def test_widget_tv_play(self, browser):
+        js_click(browser, *WidgetsLocators.TV_PLAY_STOP)
+        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)
+
+    def test_widget_vk_play(self, browser):
+        js_click(browser, *WidgetsLocators.VK_PLAY_STOP)
+        assert page_helper.is_element_present(browser, *BasePageLocators.PLAYING_TRACK)

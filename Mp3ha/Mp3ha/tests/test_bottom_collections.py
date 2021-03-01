@@ -11,11 +11,11 @@ class TestBottomCollections:
         name1 = page_helper.get_text_element(browser, *BottomCollectionLocators.HEADER)
         js_click(browser, *BottomCollectionLocators.HEADER)
         h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
+        assert name1 in h1, print(name1, h1)
 
     @pytest.mark.regression
     def test_bottom_collection_name(self, browser):
         name1 = page_helper.get_text_element(browser, *BottomCollectionLocators.COLLECTION_NAME)
         js_click(browser, *BottomCollectionLocators.COLLECTION_NAME)
         h1 = page_helper.get_h1_text(browser)
-        assert name1 in h1
+        assert name1 in h1, print(name1, h1)

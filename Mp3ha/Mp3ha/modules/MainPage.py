@@ -12,3 +12,7 @@ def like_track(browser):
 
 def press_fav_button(browser):
 	js_click(browser, *BasePageLocators.BUTTON_FAVORITE)
+
+
+def click_listen_button(browser):
+	js_click(browser, *BasePageLocators.LISTEN_BUTTON)

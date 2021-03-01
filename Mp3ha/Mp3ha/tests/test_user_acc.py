@@ -1,6 +1,7 @@
 import pytest
 from modules import Menu
 from modules import MainPage
+from modules import SingersAlbums
 from helper.page_helper import *
 from helper import page_helper
 from modules import User_acc, Collections
@@ -29,7 +30,7 @@ class TestUserAcc:
     def test_user_like_albums(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
         Menu.go_to_menu_albums(browser_cookies)
-        Collections.open_random_collection(browser_cookies)
+        SingersAlbums.open_random_collection(browser_cookies)
         name1 = page_helper.get_h1_text(browser_cookies)
         MainPage.press_fav_button(browser_cookies)
         User_acc.go_to_user_acc(browser_cookies)
@@ -42,7 +43,7 @@ class TestUserAcc:
     def test_user_like_singers(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
         Menu.go_to_menu_singers(browser_cookies)
-        Collections.open_random_collection(browser_cookies)
+        SingersAlbums.open_random_collection(browser_cookies)
         name1 = page_helper.get_h1_text(browser_cookies)
         MainPage.press_fav_button(browser_cookies)
         User_acc.go_to_user_acc(browser_cookies)

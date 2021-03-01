@@ -3,20 +3,20 @@ from locators.Menu import MenuLocators
 
 
 def go_to_menu_genres(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_GENRES)
+	js_click(browser, *MenuLocators.MENU_GENRES)
 
 
 def go_to_menu_singers(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_SINGERS)
+	js_click(browser, *MenuLocators.MENU_SINGERS)
 
 
 def go_to_menu_albums(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_ALBUMS)
+	js_click(browser, *MenuLocators.MENU_ALBUMS)
 
 
 def go_to_menu_radio(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_RADIO)
+	js_click(browser, *MenuLocators.MENU_RADIO)
 
 
 def go_to_menu_collections(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_COLLECTIONS)
+	js_click(browser, *MenuLocators.MENU_COLLECTIONS)

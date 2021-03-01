@@ -10,7 +10,7 @@ class UserLocators:
     USER_ACC = (By.CSS_SELECTOR, ".mH3y")
 
     n = randint(1, 100)
-    LIKE_RANDOM_TRACK = (By.CSS_SELECTOR, " div.mH7l.mH7n > div > ul > li:nth-child(%s) > div.mH6d.mH6e"
+    LIKE_RANDOM_TRACK = (By.CSS_SELECTOR, "div.mH7l.mH7n > div > ul > li:nth-child(%s) > div.mH6d.mH6e"
                          % n)
     RANDOM_TRACK = (By.CSS_SELECTOR, "div.mH7l.mH7n > div > ul > li:nth-child(%s)" % n)
 

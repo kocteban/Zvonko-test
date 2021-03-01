@@ -16,6 +16,8 @@ class BasePageLocators:
     LIKE_TRACK = (By.CSS_SELECTOR, ".mH6d.mH6e")
     BUTTON_FAVORITE = (By.CSS_SELECTOR, ".mH74.mH7w.mH6d")
 
+    LISTEN_BUTTON = (By.CSS_SELECTOR, ".mH74.mH75")
+
     H1 = 'body h1'
 
     MAIN_LOGO = (By.CSS_SELECTOR, ".mH9.mH8 img")
