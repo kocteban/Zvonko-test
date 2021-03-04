@@ -1,6 +1,7 @@
 import pytest
 from modules import Menu
 from helper import page_helper
+from locators.BasePage import *
 
 
 class TestMenu:
@@ -32,7 +33,7 @@ class TestMenu:
     def test_top_menu_collections(self, browser):
         Menu.go_to_menu_collections(browser)
         url = browser.current_url
-        needed_url = "https://wwv.zvuch.com/collections"
+        needed_url = BasePageLocators.SITE_URL + "collections"
         assert needed_url == url
 
     @pytest.mark.regression
@@ -63,5 +64,5 @@ class TestMenu:
     def test_bot_menu_collections(self, browser):
         Menu.go_to_bot_menu_collections(browser)
         url = browser.current_url
-        needed_url = "https://wwv.zvuch.com/collections"
+        needed_url = BasePageLocators.SITE_URL + "collections"
         assert needed_url == url
