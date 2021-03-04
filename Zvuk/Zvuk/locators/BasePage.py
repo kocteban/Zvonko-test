@@ -5,36 +5,24 @@ from random import *
 class BasePageLocators:
     SITE_URL = 'https://music.zvuk.top/'
 
-    PLAYING_TRACK = (By.CSS_SELECTOR, ".item.played.active")
-    PAUSED_TRACK = (By.CSS_SELECTOR, ".item.played.active.pause")
+    PLAYING_TRACK = (By.CSS_SELECTOR, ".Z-t1b.Z-tn")
+    PAUSED_TRACK = (By.CSS_SELECTOR, ".Z-t1b.Z-tn.Z-tf")
     RANDOM_TRACK = (By.CSS_SELECTOR, ".mainSongs > :nth-child(%s)" % str(randint(1, 100)))
     FIRST_TRACK = (By.CSS_SELECTOR, ".mainSongs > :nth-child(1)")
     SECOND_TRACK = (By.CSS_SELECTOR, ".mainSongs > :nth-child(2)")
-    PLAYING_RADIO = (By.CSS_SELECTOR, ".item.play")
-    LISTEN_BUTTON = (By.CSS_SELECTOR, ".listen.button")
-    PLAY_RANDOM_TRACK = (By.CSS_SELECTOR, ".module-layout .mainSongs>:nth-child(%s) .play" % str(randint(1, 100)))
+    PLAYING_RADIO = (By.CSS_SELECTOR, ".Z-t1b.Z-te")
+    LISTEN_BUTTON = (By.CSS_SELECTOR, ".Z-t2p.Z-t69")
+    PLAY_RANDOM_TRACK = (By.CSS_SELECTOR, ".mainSongs>:nth-child(%s) .Z-te" % str(randint(1, 100)))
 
-    LIKE_TRACK = (By.CSS_SELECTOR, ".favorite.favoriteIco")
-    BUTTON_FAVORITE = (By.CSS_SELECTOR, ".button.outline.favorite")
+    LIKE_TRACK = (By.CSS_SELECTOR, ".Z-t2q.Z-t1j")
+    BUTTON_FAVORITE = (By.CSS_SELECTOR, ".Z-t2q.Z-t7s")
 
-    PAGE_DESCRIPTION_NAME = (By.CSS_SELECTOR, "div.mobileHide.topPageDescription > p:nth-child(2) > a:nth-child(%s) > span"
-                             % str(randint(2, 6)))
-
-    SBER_PLAY_BUTTON = (By.CSS_SELECTOR, ".span.desktop .actions .playOther .playOtherLink")
-    SBER_DOWNLOAD_BUTTON = (By.CSS_SELECTOR, ".span.desktop .download .dl")
+    SBER_DOWNLOAD_BUTTON = (By.CSS_SELECTOR, ".Z-tx")
     SBER_URL = "sber-zvuk.com"
 
     H1 = 'body h1'
 
-    MAIN_LOGO = (By.CSS_SELECTOR, ".logo")
+    MAIN_LOGO = (By.CSS_SELECTOR, ".Z-t5")
 
-    SEARCH = (By.CSS_SELECTOR, "#search")
+    SEARCH = (By.CSS_SELECTOR, "#Z-t3g")
     SEARCH_BUTTON = (By.CSS_SELECTOR, ".form [type = 'submit']")
-
-    GENRES_SHOW_ALL = (By.CSS_SELECTOR, ".centerMain .showAll")
-    GENRES_LIST_GENRE = (By.CSS_SELECTOR, "div.module-popular > div > ul > li:nth-child(48) > a")
-    RANDOM_GENRE_LIST = (By.CSS_SELECTOR, "div.module-popular > div > ul > li:nth-child(%s) > a" % str(randint(1, 61)))
-
-    j = randint(1, 2)
-    k = randint(1, 28)
-    ALPHABET_LETTER = (By.CSS_SELECTOR, "noindex > div > ul:nth-child(%s) > li:nth-child(%s) > a" % (j, k))
