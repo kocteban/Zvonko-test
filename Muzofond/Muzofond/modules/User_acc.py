@@ -11,7 +11,7 @@ def login_user_acc(browser_cookies):
 	except NoSuchElementException:
 		pass
 	go_to_user_acc(browser_cookies)
-	js_click(browser_cookies, *UserLocators.MAIL_AUTH)
+	js_click(browser_cookies, *UserLocators.YA_AUTH)
 
 
 def logout_user_acc(browser_cookies):
