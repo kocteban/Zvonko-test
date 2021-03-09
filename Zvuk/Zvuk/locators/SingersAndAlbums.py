@@ -3,4 +3,4 @@ from random import *
 
 
 class SingerAndAlbumLocators:
-    COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop > div > ul > li:nth-child(%s) > a > span" % randint(1, 100))
+    COLLECTION_NAME = (By.CSS_SELECTOR, ".Z-t4a > ul > li:nth-child(%s) > a > span" % randint(1, 100))

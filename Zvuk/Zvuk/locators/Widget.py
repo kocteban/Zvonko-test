@@ -2,14 +2,16 @@ from selenium.webdriver.common.by import By
 
 
 class WidgetsLocators:
-    POPULAR_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) > h3 > a")
+    MONTH_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(6) > div > div.titleCollections > h3 > a")
+    GENRES_SHOW_ALL = ()
     SINGERS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(5) > h3 > a")
-    NEWS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(6) > div > div.titleCollections > h3 > a")
-    RADIO_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(7) > h3 > a")
-    SPORT_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(8) > h3 > a")
-    OST_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(9) > h3 > a")
-    GAMES_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(10) > h3 > a")
-    NATIONAL_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(11) > h3 > a")
+    POPULAR_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) > h3 > a")
+    NEWS_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) > h3 > a")
+    RADIO_ONLINE_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(7) > h3 > a")
+    TOP_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(8) > h3 > a")
+    TV_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(9) > h3 > a")
+    RADIO_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(10) > h3 > a")
+    EUROPE_SHOW_ALL = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(11) > h3 > a")
 
     POPULAR_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(4) > span:nth-child(2) > a")
     SINGERS_COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.desktop-sidebar > div:nth-child(5) > span:nth-child(2) > a")

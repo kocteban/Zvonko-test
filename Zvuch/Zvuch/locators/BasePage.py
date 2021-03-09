@@ -3,7 +3,7 @@ from random import *
 
 
 class BasePageLocators:
-    SITE_URL = 'https://test.mp3poisk.me/'
+    SITE_URL = 'https://test2.mp3poisk.me/'
 
     PLAYING_TRACK = (By.CSS_SELECTOR, ".item.played.active")
     PAUSED_TRACK = (By.CSS_SELECTOR, ".item.played.active.pause")

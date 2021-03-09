@@ -3,48 +3,24 @@ from locators.Menu import MenuLocators
 
 
 def go_to_menu_news(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_NEWS)
+	js_click(browser, *MenuLocators.MENU_TOP)
 
 
 def go_to_menu_genres(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_GENRES)
+	js_click(browser, *MenuLocators.MENU_GENRES)
 
 
 def go_to_menu_singers(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_SINGERS)
+	js_click(browser, *MenuLocators.MENU_SINGERS)
 
 
 def go_to_menu_albums(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_ALBUMS)
+	js_click(browser, *MenuLocators.MENU_ALBUMS)
 
 
 def go_to_menu_radio(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_RADIO)
+	js_click(browser, *MenuLocators.MENU_RADIO)
 
 
 def go_to_menu_collections(browser):
-	js_click(browser, *MenuLocators.TOP_MENU_COLLECTIONS)
-
-
-def go_to_bot_menu_news(browser):
-	js_click(browser, *MenuLocators.BOT_MENU_NEWS)
-
-
-def go_to_bot_menu_genres(browser):
-	js_click(browser, *MenuLocators.BOT_MENU_GENRES)
-
-
-def go_to_bot_menu_singers(browser):
-	js_click(browser, *MenuLocators.BOT_MENU_SINGERS)
-
-
-def go_to_bot_menu_albums(browser):
-	js_click(browser, *MenuLocators.BOT_MENU_ALBUMS)
-
-
-def go_to_bot_menu_radio(browser):
-	js_click(browser, *MenuLocators.BOT_MENU_RADIO)
-
-
-def go_to_bot_menu_collections(browser):
-	js_click(browser, *MenuLocators.BOT_MENU_COLLECTIONS)
+	js_click(browser, *MenuLocators.MENU_COLLECTIONS)

@@ -10,5 +10,5 @@ class CollectionLocators:
 
     k = randrange(3, 42, 2)
     COLLECTION_SLIDER_ARROW = (By.CSS_SELECTOR, "div.span.desktop > div > div:nth-child(%s) > div.kineticRight" % k)
-    COLLECTION_SLIDER_CHECK = (By.CSS_SELECTOR, " div.span.desktop > div > div:nth-child(%s) > div.kineticCenter.kinetic-active > ul > li:nth-child(7) > a"
+    COLLECTION_SLIDER_CHECK = (By.CSS_SELECTOR, "div.span.desktop > div > div:nth-child(%s) > div.kineticCenter.kinetic-active > ul > li:nth-child(7) > a"
                                % k)

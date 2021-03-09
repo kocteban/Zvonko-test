@@ -3,12 +3,11 @@ from random import *
 
 
 class CollectionLocators:
-    COLLECTION_NAME = (By.CSS_SELECTOR, "div.kineticCenter.kinetic-active > ul > li:nth-child(%s) > a > span" % str(randint(1, 10)))
+    COLLECTION_NAME = (By.CSS_SELECTOR, "div.span.Z-t7a > div:nth-child(%s) > div > div.Z-t4y.kinetic-active > ul > li:nth-child(3) > a > span" % str(randint(3, 24)))
 
-    n = randrange(2, 41, 2)
-    COLLECTION_SLIDER_HEADER = (By.CSS_SELECTOR, "div.span.desktop > div > h3:nth-child(%s) > a" % n)
+    COLLECTION_SLIDER_HEADER = (By.CSS_SELECTOR, "div.span.Z-t7a > div:nth-child(%s) > h3 > a" % str(randint(3, 24)))
 
-    k = randrange(3, 42, 2)
-    COLLECTION_SLIDER_ARROW = (By.CSS_SELECTOR, "div.span.desktop > div > div:nth-child(%s) > div.kineticRight" % k)
-    COLLECTION_SLIDER_CHECK = (By.CSS_SELECTOR, " div.span.desktop > div > div:nth-child(%s) > div.kineticCenter.kinetic-active > ul > li:nth-child(7) > a"
+    k = randrange(3, 24)
+    COLLECTION_SLIDER_ARROW = (By.CSS_SELECTOR, "div.span.Z-t7a > div:nth-child(%s) > div > div.Z-t4x" % k)
+    COLLECTION_SLIDER_CHECK = (By.CSS_SELECTOR, "div.span.Z-t7a > div:nth-child(%s) div.Z-t4y.kinetic-active li:nth-child(5) span"
                                % k)
