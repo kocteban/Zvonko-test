@@ -14,6 +14,7 @@ from locators.BasePage import *
 class TestUserAcc:
     def test_user_auth(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
+        User_acc.go_to_user_acc(browser_cookies)
         result = page_helper.is_element_clickable(browser_cookies, *UserLocators.LOGOUT)
         User_acc.logout_user_acc(browser_cookies)
         assert result
@@ -39,7 +40,8 @@ class TestUserAcc:
         name2 = page_helper.get_text_element(browser_cookies, *UserLocators.FIRST_COLLECTION_NAME)
         js_click(browser_cookies, *UserLocators.FIRST_COLLECTION_NAME)
         MainPage.press_fav_button(browser_cookies)
-        assert name2 in name1
+        User_acc.logout_user_acc(browser_cookies)
+        assert name1 in name2
 
     def test_user_like_singers(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
@@ -52,7 +54,8 @@ class TestUserAcc:
         name2 = page_helper.get_text_element(browser_cookies, *UserLocators.FIRST_COLLECTION_NAME)
         js_click(browser_cookies, *UserLocators.FIRST_COLLECTION_NAME)
         MainPage.press_fav_button(browser_cookies)
-        assert name2 in name1
+        User_acc.logout_user_acc(browser_cookies)
+        assert name1 in name2
 
     def test_user_like_collection(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
@@ -65,7 +68,8 @@ class TestUserAcc:
         name2 = page_helper.get_text_element(browser_cookies, *UserLocators.FIRST_COLLECTION_NAME)
         js_click(browser_cookies, *UserLocators.FIRST_COLLECTION_NAME)
         MainPage.press_fav_button(browser_cookies)
-        assert name2 in name1
+        User_acc.logout_user_acc(browser_cookies)
+        assert name1 in name2
 
     def test_user_create_playlist(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
@@ -74,8 +78,10 @@ class TestUserAcc:
         User_acc.create_new_playlist(browser_cookies)
         name1 = page_helper.get_text_element(browser_cookies, *UserLocators.PLAYLIST_NAME)
         User_acc.delete_playlist(browser_cookies)
+        User_acc.logout_user_acc(browser_cookies)
         assert name1 == 'новый плейлист'
 
+    @pytest.mark.xfail
     def test_user_add_new_music_playlist(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
         User_acc.create_music_playlist(browser_cookies)
@@ -88,6 +94,7 @@ class TestUserAcc:
         User_acc.logout_user_acc(browser_cookies)
         assert id1 == id2
 
+    @pytest.mark.xfail
     def test_user_search_music_in_playlist(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
         User_acc.go_to_user_acc(browser_cookies)
@@ -99,8 +106,10 @@ class TestUserAcc:
         js_click(browser_cookies, *UserLocators.ADD_TRACK_TO_PLAYLIST)
         id2 = page_helper.get_data_id(browser_cookies, *UserLocators.FIRST_TRACK_PLAYLIST)
         User_acc.delete_playlist(browser_cookies)
+        User_acc.logout_user_acc(browser_cookies)
         assert id1 == id2
 
+    @pytest.mark.xfail
     def test_user_add_music_old_playlist(self, browser_cookies):
         User_acc.login_user_acc(browser_cookies)
         User_acc.go_to_user_acc(browser_cookies)

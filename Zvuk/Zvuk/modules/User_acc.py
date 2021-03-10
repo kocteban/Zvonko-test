@@ -1,4 +1,4 @@
-from selenium.common.exceptions import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException, ElementNotInteractableException
 from helper.page_helper import js_click
 from locators.BasePage import *
 from locators.User import *
@@ -8,13 +8,13 @@ def login_user_acc(browser_cookies):
 	browser_cookies.implicitly_wait(2)
 	try:
 		logout_user_acc(browser_cookies)
-	except NoSuchElementException:
+	except NoSuchElementException or ElementNotInteractableException:
 		pass
-	go_to_user_acc(browser_cookies)
 	js_click(browser_cookies, *UserLocators.MAIL_AUTH)
 
 
 def logout_user_acc(browser_cookies):
+	go_to_user_acc(browser_cookies)
 	js_click(browser_cookies, *UserLocators.LOGOUT)
 
 

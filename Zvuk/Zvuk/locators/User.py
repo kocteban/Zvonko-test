@@ -3,8 +3,8 @@ from random import *
 
 
 class UserLocators:
-    YA_AUTH = (By.CSS_SELECTOR, ".Z-t44.Z-t46")
-    MAIL_AUTH = (By.CSS_SELECTOR, ".Z-t44.Z-t48")
+    YA_AUTH = (By.CSS_SELECTOR, ".Z-t44.Z-t48")
+    MAIL_AUTH = (By.CSS_SELECTOR, ".Z-t44.Z-t46")
     LOGOUT = (By.CSS_SELECTOR, ".Z-t4c > a")
     USER_ACC = (By.CSS_SELECTOR, ".Z-t3x")
 

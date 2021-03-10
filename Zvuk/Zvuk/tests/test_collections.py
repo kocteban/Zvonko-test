@@ -47,22 +47,14 @@ class TestCollections:
         cur_url = browser.current_url
         assert BasePageLocators.SBER_URL in cur_url
 
-    def test_collections_sber_play_button(self, browser):
-        Menu.go_to_menu_collections(browser)
-        Collections.open_random_collection(browser)
-        MainPage.press_sber_play(browser)
-        page_helper.switch_to_second_window(browser)
-        cur_url = browser.current_url
-        assert BasePageLocators.SBER_URL in cur_url
-
     def test_collections_like_button(self, browser):
         Menu.go_to_menu_collections(browser)
         Collections.open_random_collection(browser)
         MainPage.like_track(browser)
-        assert page_helper.is_element_clickable(browser, *UserLocators.VK_AUTH)
+        assert page_helper.is_element_clickable(browser, *UserLocators.YA_AUTH)
 
     def test_collections_favorite_button(self, browser):
         Menu.go_to_menu_collections(browser)
         Collections.open_random_collection(browser)
         MainPage.press_fav_button(browser)
-        assert page_helper.is_element_clickable(browser, *UserLocators.VK_AUTH)
+        assert page_helper.is_element_clickable(browser, *UserLocators.YA_AUTH)

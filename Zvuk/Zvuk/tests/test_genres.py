@@ -18,16 +18,6 @@ class TestGenres:
         h1 = page_helper.get_h1_text(browser)
         assert name1 in h1
 
-    def test_genres_sber_play_button(self, browser):
-        Menu.go_to_menu_genres(browser)
-        time.sleep(2)
-        Genres.open_random_genre(browser)
-        time.sleep(2)
-        MainPage.press_sber_play(browser)
-        page_helper.switch_to_second_window(browser)
-        cur_url = browser.current_url
-        assert BasePageLocators.SBER_URL in cur_url
-
     def test_genres_sber_download_button(self, browser):
         Menu.go_to_menu_genres(browser)
         time.sleep(2)
@@ -45,4 +35,4 @@ class TestGenres:
         time.sleep(2)
         time.sleep(2)
         MainPage.like_track(browser)
-        assert page_helper.is_element_clickable(browser, *UserLocators.VK_AUTH)
+        assert page_helper.is_element_clickable(browser, *UserLocators.YA_AUTH)
