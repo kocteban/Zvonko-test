@@ -22,21 +22,5 @@ def press_fav_button(browser):
 	js_click(browser, *BasePageLocators.BUTTON_FAVORITE)
 
 
-def press_sber_play(browser):
-	js_click(browser, *BasePageLocators.SBER_PLAY_BUTTON)
-
-
 def press_sber_download(browser):
 	js_click(browser, *BasePageLocators.SBER_DOWNLOAD_BUTTON)
-
-
-def open_genres_list(browser):
-	js_click(browser, *BasePageLocators.GENRES_SHOW_ALL)
-
-
-def open_random_genre(browser):
-	js_click(browser, *BasePageLocators.RANDOM_GENRE_LIST)
-
-
-def open_random_letter(browser):
-	js_click(browser, *BasePageLocators.ALPHABET_LETTER)
